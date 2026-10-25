@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TaskFlow | To-Do List</title>
+
+    <link rel="stylesheet" href="Style.css">
+    <script src="Script.js" defer></script>
+</head>
+<body>
+
+    <main class="app-container">
+
+        <header class="app-header">
+            <div class="app-logo">✓</div>
+
+            <div>
+                <h1>TaskFlow</h1>
+                <p>Small steps make big progress.</p>
+            </div>
+        </header>
+
+        <section class="task-form">
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="What needs to be done?"
+                aria-label="New task"
+                maxlength="150"
+            >
+
+            <button id="addButton" type="button">
+                + Add Task
+            </button>
+        </section>
+
+        <section class="task-dashboard">
+
+            <nav class="task-filters" aria-label="Filter tasks">
+                <button class="filter-btn active"
+                        data-filter="all">
+                    All
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="active">
+                    Active
+                </button>
+
+                <button class="filter-btn"
+                        data-filter="completed">
+                    Completed
+                </button>
+            </nav>
+
+            <div class="task-stats">
+                <p>Total: <span id="totalCount">0</span></p>
+                <p>Completed: <span id="completedCount">0</span></p>
+            </div>
+
+        </section>
+
+        <section class="tasks-section">
+            <h2>My Tasks</h2>
+
+            <ul id="taskList" aria-live="polite"></ul>
+
+            <p id="emptyMessage">
+                No tasks yet. Add your first task!
+            </p>
+        </section>
+
+        <footer class="app-footer">
+            <p>Keep going! You're doing great. 💙</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
